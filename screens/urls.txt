@@ -1,0 +1,17 @@
+
+Public URL to GitHub repository (not private) 
+https://github.com/Abdelrhman-bfci/udc_-Auto-Deploy-Superpowers
+
+Public URL for your S3 Bucket s3-website (aka, your green candidate front-end) 
+http://udapeople-5751056.s3-website-us-east-1.amazonaws.com/#/employees
+
+Public URL for your CloudFront distribution cloudfront.net
+http://d3mosjkdfp70d1.cloudfront.net/#/employees
+
+Public URL to deployed application back-end in EC2 
+http://18.209.82.114:3030/api/status
+
+
+Public URL to your Prometheus Server [URL05] 
+http://52.87.206.43:9090/graph
+
