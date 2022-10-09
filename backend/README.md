@@ -146,7 +146,7 @@ You need to add some environment variables to your system in order to run migrat
 
 ```
 TYPEORM_CONNECTION=postgres
-TYPEORM_HOST=localhost
+TYPEORM_HOST=localhost 
 TYPEORM_PORT=5432
 TYPEORM_USERNAME=postgres
 TYPEORM_PASSWORD=password
