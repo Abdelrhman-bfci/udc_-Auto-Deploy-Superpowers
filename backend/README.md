@@ -155,6 +155,7 @@ TYPEORM_MIGRATIONS=./src/migrations/*.ts
 TYPEORM_ENTITIES=./src/modules/**/*.entity.ts
 ```
 
+
 ## Migrations for CI/CD Review Apps
 
 It would be best to spin up a database in RDS while we are spinning up a new environment in EB. BUT, it takes around 10 minutes to spin up a new DB in RDS. It's also more work to script the new db that we don't have time for. So, as a stop-gap, you can manually migrate a shared database ("dev") from the CI/CD screen in Gitlab. This will trigger a build step that runs "revert" and "run" to down and up the migrations. You must make sure that you have all the necessary db-related env vars in Gitlab so that this will work (see "DB Setup" section).
