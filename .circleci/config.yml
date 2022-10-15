@@ -399,7 +399,7 @@ jobs:
                 --stack-status-filter CREATE_COMPLETE --no-paginate --output text)) 
             echo Stack names: "${STACKS[@]}"
 
-            export OldWorkflowID=$(curl --insecure https://kvdb.io/${KVDB_BUCKET}/old_workflow_id)
+            export OldWorkflowID=$(curl --insecure https://kvdb.io/M3KMgwUygxmLMUqY41MsAJ/old_workflow_id)
             echo Old Workflow ID: $OldWorkflowID 
 
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
@@ -412,16 +412,16 @@ jobs:
 workflows:
   default:
     jobs:
-      - build-frontend
-      - build-backend
-      - test-frontend:
-          requires: [build-frontend]
-      - test-backend:
-          requires: [build-backend]
-      - scan-backend:
-          requires: [build-backend]
-      - scan-frontend:
-          requires: [build-frontend]
+      # - build-frontend
+      # - build-backend
+      # - test-frontend:
+      #     requires: [build-frontend]
+      # - test-backend:
+      #     requires: [build-backend]
+      # - scan-backend:
+      #     requires: [build-backend]
+      # - scan-frontend:
+      #     requires: [build-frontend]
       # - deploy-infrastructure:
       #     requires: [test-frontend, test-backend]
       #     filters:
@@ -439,5 +439,5 @@ workflows:
       #     requires: [deploy-backend, deploy-frontend]
       # - cloudfront-update:
       #     requires: [smoke-test]
-      # - cleanup:
-      #     requires: [cloudfront-update]
+      - cleanup:
+          requires: [cloudfront-update]
